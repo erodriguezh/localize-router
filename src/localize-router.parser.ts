@@ -353,7 +353,7 @@ export abstract class LocalizeParser {
     if(res.includes(this.prefix + ':')) {
       res = undefined;
     }
-    return res || key;
+    return res === undefined ? key : res;
   }
 }
 
